@@ -8,7 +8,7 @@ package javaapplication5;
 public class main {
     public static void main(String[] args) { 
     	Product product = new Product("Edam", 3.3, 120);
-        product.changeBalance(123);
+        product.changePrice(3.5);
     	System.out.println("New product value is " + product.countValue());
     	product.printProduct();
        
@@ -19,7 +19,7 @@ class Product {
 	private String name;
 	private double price;
 	private int amount; //Amount in storage
-        private int newvalue;
+        private double newprice;
       
 
 	public Product(String name, double price, int amount) {
@@ -28,9 +28,9 @@ class Product {
 		this.amount = amount;
                 
 	}
-        public int changeBalance(int newvalue) {
-                this.amount = newvalue;
-                return amount;
+        public double changePrice(double newprice) {
+                this.price = newprice;
+                return price;
          }
 
         public double countValue() {
